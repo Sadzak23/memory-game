@@ -1,0 +1,27 @@
+.board {
+  display: grid;
+  &.s {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    .tile {
+      height: 15vw;
+      width: 15vw;
+    }
+  }
+  &.m {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    .tile {
+      height: 10vw;
+      width: 10vw;
+    }
+  }
+  &.l {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+    .tile {
+      height: 8vw;
+      width: 8vw;
+    }
+  }
+}

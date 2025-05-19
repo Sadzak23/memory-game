@@ -1,0 +1,9 @@
+.tile {
+  cursor: pointer;
+  border-radius: 16px;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+}

@@ -1,2 +1,7 @@
+@use './variables/colors';
+
 @use './common/typography';
 @use './common/base';
+
+@use './components/board';
+@use './components/tile';
