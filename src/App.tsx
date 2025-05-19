@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import './styles/App.scss';
 import { Board } from './components/Board';
+import { GameProvider } from './contexts/GameContext';
 
 const App: FC = () => {
   return (
@@ -9,9 +10,17 @@ const App: FC = () => {
         <h1>Memory game</h1>
         <p>By Sadzak</p>
       </div>
-      <Board size="s" />
-      <Board size="m" />
-      <Board size="l" />
+      <GameProvider>
+        <Board size="s" />
+      </GameProvider>
+
+      <GameProvider>
+        <Board size="m" />
+      </GameProvider>
+
+      <GameProvider>
+        <Board size="l" />
+      </GameProvider>
     </div>
   );
 };

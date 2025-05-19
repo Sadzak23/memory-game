@@ -1,4 +1,5 @@
 .tile {
+  position: relative;
   cursor: pointer;
   border-radius: 16px;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
@@ -7,4 +8,21 @@
   align-items: center;
   background-color: var(--primary);
   user-select: none;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  &.flipped {
+    transform: rotateY(180deg);
+  }
+  &.matched {
+    background-color: var(--secondary);
+    animation: match 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  .front,
+  .back {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
 }

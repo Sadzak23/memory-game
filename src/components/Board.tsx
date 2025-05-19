@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 import { getBoard } from '../utils/boardUtils';
-import { getTiles } from '../utils/gameUtils';
+import { getTilePairId, getTiles } from '../utils/gameUtils';
 import { animals } from '../utils/tileData';
+import { Tile } from './Tile';
 
 interface Props {
   size: 's' | 'm' | 'l';
@@ -15,7 +16,7 @@ export const Board: FC<Props> = ({ size }) => {
   return (
     <div className={`board ${size}`}>
       {tiles.map(tile => (
-        <div className="tile">{tile}</div>
+        <Tile key={getTilePairId(tile)} tile={tile} />
       ))}
     </div>
   );
