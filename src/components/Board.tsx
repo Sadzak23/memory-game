@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 import { getBoard } from '../utils/boardUtils';
+import { getTiles } from '../utils/gameUtils';
+import { animals } from '../utils/tileData';
 
 interface Props {
   size: 's' | 'm' | 'l';
@@ -8,7 +10,7 @@ interface Props {
 export const Board: FC<Props> = ({ size }) => {
   const { tilesCount } = getBoard(size);
 
-  const tiles = Array.from({ length: tilesCount }, (_, i) => i + 1);
+  const tiles = getTiles(tilesCount, animals);
 
   return (
     <div className={`board ${size}`}>
