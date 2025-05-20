@@ -12,6 +12,7 @@ export const Settings: FC = () => {
   const tileSetsOptions = [
     { id: 'animals', value: tileSets.animals[0].value },
     { id: 'emoji', value: tileSets.emoji[0].value },
+    { id: 'food', value: tileSets.food[0].value },
   ];
   const sizeOptions = [
     { id: 's', value: 'Small' },
