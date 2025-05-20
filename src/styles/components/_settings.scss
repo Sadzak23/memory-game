@@ -1,0 +1,25 @@
+.settings-section {
+  padding: 24px;
+  .tiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    .tile {
+      height: 192px;
+      width: 192px;
+      font-size: 96px;
+      &.selected {
+        background-color: var(--secondary);
+        animation: select 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      }
+      &.inactive {
+        filter: grayscale(100%);
+      }
+      &.board-size {
+        font-size: 48px;
+      }
+    }
+  }
+}

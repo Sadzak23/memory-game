@@ -1,20 +1,17 @@
 import type { FC } from 'react';
 import { getBoard } from '../utils/boardUtils';
 import { getTilePairId, getTiles } from '../utils/gameUtils';
-import { animals } from '../utils/tileData';
 import { Tile } from './Tile';
+import { useMainContext } from '../contexts/MainContext';
+import { tileSets } from '../utils/tileData';
 
-interface Props {
-  size: 's' | 'm' | 'l';
-}
-
-export const Board: FC<Props> = ({ size }) => {
-  const { tilesCount } = getBoard(size);
-
-  const tiles = getTiles(tilesCount, animals);
+export const Board: FC = () => {
+  const { boardSize, tileSet } = useMainContext();
+  const { tilesCount } = getBoard(boardSize);
+  const tiles = getTiles(tilesCount, tileSets[tileSet]);
 
   return (
-    <div className={`board ${size}`}>
+    <div className={`board ${boardSize}`}>
       {tiles.map(tile => (
         <Tile key={getTilePairId(tile)} tile={tile} />
       ))}

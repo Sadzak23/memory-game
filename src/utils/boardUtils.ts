@@ -1,4 +1,6 @@
-export const getBoard = (boardSize: 's' | 'm' | 'l') => {
+import type { IBoardSize } from '../types/IGame';
+
+export const getBoard = (boardSize: IBoardSize) => {
   switch (boardSize) {
     case 's':
       return { grid: 4, tilesCount: 12 };
