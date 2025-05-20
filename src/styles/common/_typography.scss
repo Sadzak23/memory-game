@@ -1,21 +1,25 @@
-// @import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
-
 @font-face {
-  font-family: 'Juvanze';
-  src: url('/fonts/juvanze.woff2') format('woff2');
+  font-family: 'Readson';
+  src: url('/fonts/readson.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
-:root {
-  font-family: 'Juvanze', sans-serif;
+:root,
+button {
+  font-family: 'Readson', sans-serif;
 }
 
 h1,
 p {
   margin: 0;
+  font-weight: 400;
 }
 
 h1 {
   font-size: 64px;
+}
+
+h2 {
+  font-weight: 400;
 }
