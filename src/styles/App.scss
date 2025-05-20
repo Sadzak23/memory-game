@@ -4,5 +4,7 @@
 @use './common/animations';
 @use './common/base';
 
+@use './elements/button';
+
 @use './components/board';
 @use './components/tile';

@@ -1,0 +1,19 @@
+.button {
+  background-color: var(--secondary);
+  border: 3px solid #333;
+  border-radius: 12px;
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px #999;
+  transition: all 0.2s ease;
+  user-select: none;
+  &:hover:not(:disabled) {
+    background-color: var(--secondaryAlt);
+  }
+  &:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 2px #666;
+  }
+}
