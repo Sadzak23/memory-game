@@ -22,3 +22,20 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .settings-section {
+    .tiles {
+      flex-wrap: wrap;
+      gap: 8px;
+      .tile {
+        height: 96px;
+        width: 96px;
+        font-size: 48px;
+        &.board-size {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

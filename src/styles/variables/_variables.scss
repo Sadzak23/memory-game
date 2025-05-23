@@ -1,0 +1,17 @@
+:root {
+  --primary: #afd6e2;
+  --secondary: #c3e6da;
+  --secondaryAlt: #d2f1e6;
+
+  --pagePadding: 24px;
+  --actionsHeight: 96px;
+  --footerHeight: 64px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pagePadding: 16px;
+    --actionsHeight: 64px;
+    --footerHeight: 32px;
+  }
+}

@@ -11,15 +11,26 @@ button {
 }
 
 h1,
+h2,
 p {
   margin: 0;
   font-weight: 400;
+  text-align: center;
 }
 
 h1 {
   font-size: 64px;
 }
-
 h2 {
-  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 18px;
+  }
 }
