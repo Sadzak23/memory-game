@@ -9,11 +9,11 @@ export const Settings: FC = () => {
   const { boardSize, setBoardSize, tileSet, setTileSet, setGameStarted } =
     useMainContext();
 
-  const tileSetsOptions = [
-    { id: 'animals', value: tileSets.animals[0].value },
-    { id: 'emoji', value: tileSets.emoji[0].value },
-    { id: 'food', value: tileSets.food[0].value },
-  ];
+  const tileSetsOptions = Object.entries(tileSets).map(([key, value]) => ({
+    id: key,
+    value: value[0].value,
+  }));
+
   const sizeOptions = [
     { id: 's', value: 'Small' },
     { id: 'm', value: 'Medium' },
@@ -30,7 +30,6 @@ export const Settings: FC = () => {
               key={set.id}
               onClick={() => setTileSet(set.id as ITileSet)}
               className={clsx('tile', tileSet === set.id ? 'selected' : 'inactive')}
-              // className={clsx('tile', { inactive: tileSet !== set.id })}
             >
               {set.value}
             </div>

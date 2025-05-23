@@ -13,7 +13,7 @@ const App: FC = () => {
         </MainProvider>
       </main>
       <footer>
-        <p>This game was made by Sadzak © 2025</p>
+        <p>This game was designed & made by Sadzak © 2025</p>
       </footer>
     </div>
   );
