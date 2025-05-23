@@ -1,14 +1,21 @@
-import type { ITile } from '../types/IGame';
+import type { IBoardSize, ITile, ITileSet } from '../types/IGame';
+import { tileSets } from './tileData';
+
+const tilesCount: Record<IBoardSize, number> = {
+  s: 12, //  4*3
+  m: 32, //  8*4
+  l: 50, // 10*5
+};
 
 const shuffleArray = <T>(array: T[]): T[] => [...array].sort(() => Math.random() - 0.5);
 
-export const getTiles = (tilesCount: number, data: ITile[]): ITile[] => {
-  const pairCount = tilesCount / 2;
-  const items: ITile[] = shuffleArray(data)
+export const getTiles = (boardSize: IBoardSize, tilesSet: ITileSet): ITile[] => {
+  const pairCount = tilesCount[boardSize] / 2;
+  const items: ITile[] = shuffleArray(tileSets[tilesSet])
     .slice(0, pairCount)
     .map(item => ({ ...item, pair: 'a' }));
   const itemPairs: ITile[] = items.map(item => ({ ...item, pair: 'b' }));
-  const shuffledPairs: ITile[] = shuffleArray(items.concat(itemPairs));
+  const shuffledPairs = shuffleArray(items.concat(itemPairs));
 
   return shuffledPairs;
 };
