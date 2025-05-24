@@ -2,20 +2,18 @@ import './styles/App.scss';
 
 import type { FC } from 'react';
 import { MainProvider } from './contexts/MainContext';
-import { Game } from './pages/Game';
 import { Footer } from './components/Footer';
+import { SimpleRouter } from 'src/router/SimpleRouter';
 
-const App: FC = () => {
-  return (
-    <div className="app">
-      <main>
-        <MainProvider>
-          <Game />
-        </MainProvider>
-      </main>
-      <Footer />
-    </div>
-  );
-};
+const App: FC = () => (
+  <>
+    <main>
+      <MainProvider>
+        <SimpleRouter />
+      </MainProvider>
+    </main>
+    <Footer />
+  </>
+);
 
 export default App;

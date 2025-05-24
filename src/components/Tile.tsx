@@ -1,7 +1,7 @@
-import { useGameContext } from '../contexts/GameContext';
+import { useGameContext } from 'src/contexts/GameContext';
 import type { FC } from 'react';
-import type { ITile } from '../types/IGame';
-import { getTilePairId } from '../utils/gameUtils';
+import type { ITile } from 'src/types/IGame';
+import { getTilePairId } from 'src/utils/gameUtils';
 import clsx from 'clsx';
 
 interface Props {

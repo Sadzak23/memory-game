@@ -1,13 +1,11 @@
 import type { FC } from 'react';
-import { useMainContext } from '../contexts/MainContext';
-import { tileSets } from '../utils/tileData';
+import { tileSets } from 'src/utils/tileData';
 import clsx from 'clsx';
-import type { IBoardSize, ITileSet } from '../types/IGame';
-import { Button } from '../elements/Button';
+import type { IBoardSize, ITileSet } from 'src/types/IGame';
+import { useMainContext } from 'src/contexts/MainContext';
 
 export const Settings: FC = () => {
-  const { boardSize, setBoardSize, tileSet, setTileSet, setGameStarted } =
-    useMainContext();
+  const { boardSize, setBoardSize, tileSet, setTileSet } = useMainContext();
 
   const tileSetsOptions = Object.entries(tileSets).map(([key, value]) => ({
     id: key,
@@ -21,7 +19,7 @@ export const Settings: FC = () => {
   ];
 
   return (
-    <div>
+    <>
       <div className="settings-section">
         <h2>Choose tile set:</h2>
         <div className="tiles">
@@ -47,16 +45,12 @@ export const Settings: FC = () => {
                 'tile board-size',
                 boardSize === set.id ? 'selected' : 'inactive'
               )}
-              // className={clsx('tile', { inactive: tileSet !== set.id })}
             >
               {set.value}
             </div>
           ))}
         </div>
       </div>
-      <div className="actions">
-        <Button label="Start Game" onClick={() => setGameStarted(true)} />
-      </div>
-    </div>
+    </>
   );
 };

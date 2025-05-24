@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
-import type { ITile } from '../types/IGame';
+import type { ITile } from 'src/types/IGame';
 
 interface IGameContext {
   matchedTiles: string[];

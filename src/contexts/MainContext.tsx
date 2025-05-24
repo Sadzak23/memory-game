@@ -1,14 +1,16 @@
 import { createContext, useContext, useState } from 'react';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
-import type { IBoardSize, ITileSet } from '../types/IGame';
+import type { IBoardSize, ITile, ITileSet } from 'src/types/IGame';
+import { getTiles } from 'src/utils/gameUtils';
 
 interface IMainContext {
   boardSize: IBoardSize;
   setBoardSize: Dispatch<SetStateAction<IBoardSize>>;
   tileSet: ITileSet;
   setTileSet: Dispatch<SetStateAction<ITileSet>>;
-  gameStarted?: boolean;
-  setGameStarted: Dispatch<SetStateAction<boolean>>;
+  gameTiles: ITile[];
+  onStartGame: () => void;
+  onEndGame: () => void;
 }
 
 const MainContext = createContext<IMainContext>({
@@ -16,14 +18,15 @@ const MainContext = createContext<IMainContext>({
   setBoardSize: () => {},
   tileSet: 'animals',
   setTileSet: () => {},
-  gameStarted: false,
-  setGameStarted: () => {},
+  gameTiles: [],
+  onStartGame: () => {},
+  onEndGame: () => {},
 });
 
 export const MainProvider = ({ children }: { children: ReactNode }) => {
   const [boardSize, setBoardSize] = useState<IBoardSize>('s');
   const [tileSet, setTileSet] = useState<ITileSet>('animals');
-  const [gameStarted, setGameStarted] = useState(false);
+  const [gameTiles, setGameTiles] = useState<ITile[]>([]);
 
   return (
     <MainContext.Provider
@@ -32,8 +35,9 @@ export const MainProvider = ({ children }: { children: ReactNode }) => {
         setBoardSize,
         tileSet,
         setTileSet,
-        gameStarted,
-        setGameStarted,
+        gameTiles,
+        onStartGame: () => setGameTiles(getTiles(boardSize, tileSet)),
+        onEndGame: () => setGameTiles([]),
       }}
     >
       {children}
