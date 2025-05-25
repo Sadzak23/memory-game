@@ -21,7 +21,7 @@ export const Settings: FC = () => {
   return (
     <>
       <div className="settings-section">
-        <h2>Choose tile set:</h2>
+        <h2>Tile set:</h2>
         <div className="tiles">
           {tileSetsOptions.map(set => (
             <div
@@ -35,7 +35,7 @@ export const Settings: FC = () => {
         </div>
       </div>
       <div className="settings-section">
-        <h2>Choose board size:</h2>
+        <h2>Board size:</h2>
         <div className="tiles">
           {sizeOptions.map(set => (
             <div
