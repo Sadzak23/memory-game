@@ -1,0 +1,30 @@
+.win-animation {
+  position: fixed;
+  inset: 0;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  pointer-events: none;
+  background-color: #00000099;
+  border-radius: 16px;
+  padding: min(5dvh, 5vw);
+  margin: auto;
+  .win-text {
+    font-size: min(15dvh, 15vw);
+    background: linear-gradient(90deg, gold, white, gold);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    animation: shine 2s linear infinite;
+    text-align: center;
+  }
+
+  .pulse {
+    font-size: min(20dvh, 20vw);
+    animation: pulse 1.2s infinite;
+  }
+}

@@ -8,16 +8,19 @@
     .tile {
       height: 192px;
       width: 192px;
-      font-size: 96px;
       &.selected {
         background-color: var(--secondary);
-        animation: select 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        font-size: 96px;
+        &.board-size {
+          font-size: 36px;
+        }
       }
       &.inactive {
         filter: grayscale(100%);
-      }
-      &.board-size {
-        font-size: 36px;
+        font-size: 72px;
+        &.board-size {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -31,9 +34,17 @@
       .tile {
         height: 96px;
         width: 96px;
-        font-size: 48px;
-        &.board-size {
-          font-size: 16px;
+        &.selected {
+          font-size: 48px;
+          &.board-size {
+            font-size: 18px;
+          }
+        }
+        &.inactive {
+          font-size: 36px;
+          &.board-size {
+            font-size: 14px;
+          }
         }
       }
     }

@@ -7,9 +7,9 @@
   justify-content: center;
   align-items: center;
   background-color: var(--primary);
-  user-select: none;
   transform-style: preserve-3d;
-  transition: transform 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-tap-highlight-color: transparent;
   &.flipped {
     transform: rotateY(180deg);
   }

@@ -1,7 +1,7 @@
 import type { IBoardSize, ITile, ITileSet } from '../types/IGame';
 import { tileSets } from './tileData';
 
-const tilesCount: Record<IBoardSize, number> = {
+export const tilesCount: Record<IBoardSize, number> = {
   s: 12, //  4*3
   m: 32, //  8*4
   l: 50, // 10*5

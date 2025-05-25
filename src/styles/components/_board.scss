@@ -5,6 +5,7 @@
   --boardPaddingY: 96px;
   --boardGap: 24px;
 
+  position: relative;
   display: grid;
   gap: var(--boardGap);
   grid-template-columns: repeat(var(--tileGridX), 1fr);

@@ -7,7 +7,6 @@
   padding: 12px 24px;
   box-shadow: 0 4px #999;
   transition: all 0.2s ease;
-  user-select: none;
   &:hover:not(:disabled) {
     background-color: var(--secondaryAlt);
   }
