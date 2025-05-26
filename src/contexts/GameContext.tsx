@@ -24,19 +24,24 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   const [timeOutId, setTimeOutId] = useState<number | null>(null);
 
   const onTileClick = (tile: ITile) => {
+    // Select first tile
     if (!selectedTiles.tile1 || selectedTiles.tile2) {
       setSelectedTiles({ tile1: tile, tile2: null });
       if (timeOutId) {
         clearTimeout(timeOutId);
         setTimeOutId(null);
       }
-    } else {
+    }
+    // Select second tile
+    else {
       setSelectedTiles({ ...selectedTiles, tile2: tile });
+      // If the tiles match, wait for the selection animation to finish, then add them to the matched tiles.
       if (selectedTiles.tile1.id === tile.id) {
         setTimeout(() => {
           setMatchedTiles(prev => [...prev, tile.id]);
           setSelectedTiles({ tile1: null, tile2: null });
         }, 450);
+        // Else wait for a second before resetting
       } else {
         const id = setTimeout(() => {
           setSelectedTiles({ tile1: null, tile2: null });
