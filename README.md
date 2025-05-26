@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# 🧠 Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small weekend project I made for my daughter to play with.
 
-Currently, two official plugins are available:
+- Made with **React**, **Vite**, and **SCSS**
+- No external libraries used
+- No AI was involved in the development of this game
+- **Design & code by Sadzak**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Options
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Board Size
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Small** – 4 × 3
+- **Medium** – 8 × 4
+- **Large** – 10 × 5
+
+### Tile Sets
+
+- Animals
+- Emoji
+- Food
+- Fruits & Veggies
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** (v16 or newer) and **npm** installed.
+
+### 📦 Installation
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🧪 Run in Development Mode
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Then open your browser and go to [http://localhost:3100](http://localhost:3100)
+
+### 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+### 🔍 Preview Production Build
+
+```bash
+npm run preview
 ```
