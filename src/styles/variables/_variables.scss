@@ -1,6 +1,7 @@
 :root {
-  --primary: #80d8c3;
-  --primaryAlt: #70c9b4;
+  --primary: #76c5b3;
+  --primaryHover: #70c9b4;
+  --primaryShadow: #2d6155;
   --secondary: #8accf0;
 
   --pagePadding: 24px;
@@ -8,12 +9,12 @@
   --footerHeight: 64px;
   --background: #f4f4f4;
   --text: #222;
-  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='dark'] {
   --primary: #558a78;
-  --primaryAlt: #457464;
+  --primaryHover: #457464;
+  --primaryShadow: #1e3a33;
   --secondary: #4d64a5;
 
   --background: #4b5258;

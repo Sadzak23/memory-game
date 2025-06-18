@@ -7,6 +7,6 @@ interface Props {
 
 export const Button: FC<Props> = ({ label, onClick }) => (
   <button className="button" onClick={onClick}>
-    {label}
+    <span className="front">{label}</span>
   </button>
 );
