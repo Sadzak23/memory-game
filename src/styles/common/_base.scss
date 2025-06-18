@@ -31,17 +31,3 @@ body {
   gap: 16px;
   margin-top: 16px;
 }
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: var(--footerHeight);
-}
-
-@media (max-width: 768px) {
-  footer p {
-    font-size: 10px;
-  }
-}
