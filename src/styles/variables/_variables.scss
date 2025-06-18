@@ -1,11 +1,23 @@
 :root {
-  --primary: #afd6e2;
-  --secondary: #c3e6da;
-  --secondaryAlt: #d2f1e6;
+  --primary: #80d8c3;
+  --primaryAlt: #70c9b4;
+  --secondary: #8accf0;
 
   --pagePadding: 24px;
   --actionsHeight: 96px;
   --footerHeight: 64px;
+  --background: #f4f4f4;
+  --text: #222;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] {
+  --primary: #558a78;
+  --primaryAlt: #457464;
+  --secondary: #4d64a5;
+
+  --background: #4b5258;
+  --text: #f4f4f4;
 }
 
 @media (max-width: 768px) {

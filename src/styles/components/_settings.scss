@@ -10,7 +10,7 @@
       width: 192px;
       transition: all 0.15s ease-in-out;
       &.selected {
-        background-color: var(--secondary);
+        background-color: var(--primary);
         font-size: 96px;
         &.board-size {
           font-size: 36px;

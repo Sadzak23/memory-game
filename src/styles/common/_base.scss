@@ -6,7 +6,8 @@ body {
   margin: 0;
   max-height: 100dvh;
   max-width: 100vw;
-  background-color: #f4f4f4;
+  background-color: var(--background);
+  color: var(--text);
   user-select: none;
 }
 #root {
