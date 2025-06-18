@@ -21,7 +21,7 @@ const Game: FC = () => {
       </div>
       {win && <WinAlert />}
       <div className="actions">
-        <Button label="End Game" onClick={onEndGame} />
+        <Button label="End Game" onClick={() => setTimeout(onEndGame, 300)} />
       </div>
     </>
   );

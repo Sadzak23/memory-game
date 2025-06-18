@@ -13,7 +13,7 @@ export const HomePage: FC = () => {
       <Settings />
       <div className="actions">
         <ChangeTheme />
-        <Button label="Start Game" onClick={onStartGame} />
+        <Button label="Start Game" onClick={() => setTimeout(onStartGame, 300)} />
       </div>
     </>
   );
